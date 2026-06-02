@@ -1,0 +1,11 @@
+# build output
+dist/
+
+# dependencies
+node_modules/
+
+# generated types
+src/env.d.ts
+
+# OS
+.DS_Store

@@ -8,4 +8,4 @@ This is the website of Tualatin Oregon Growth Network (TOGN). We are an organiza
 
 ## Technical Details
 
-https://togn.org is hosted on GitHub and developed with Hugo. There is a mailing list hosted on Google Groups on the togn.org workspace.
+https://togn.org is hosted on GitHub and developed with Astro. There is a mailing list hosted on Google Groups on the togn.org workspace.

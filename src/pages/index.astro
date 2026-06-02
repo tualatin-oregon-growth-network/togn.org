@@ -1,0 +1,173 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="TOGN — Tualatin Oregon Growth Network">
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Tualatin Oregon<br /><span>Growth Network</span></h1>
+      <p class="tagline">Supporting the sustainable future of Tualatin — trails, housing, and community.</p>
+      <a href="#contact" class="btn">Get Involved</a>
+    </div>
+  </section>
+
+  <!-- Mission -->
+  <section class="section" id="mission">
+    <div class="container">
+      <h2>Our Mission</h2>
+      <p class="lead">
+        TOGN is a community organization dedicated to shaping Tualatin's growth in ways that
+        honor its natural environment, meet the needs of all residents, and build lasting
+        connections between neighbors.
+      </p>
+
+      <div class="pillars">
+        <div class="pillar" id="trails">
+          <div class="pillar-icon">🌲</div>
+          <h3>Trail Networks</h3>
+          <p>
+            Nurture and expand Tualatin's trail networks for walkers, cyclists, and families.
+            We advocate for connected, accessible greenways that link neighborhoods to nature.
+          </p>
+        </div>
+
+        <div class="pillar" id="housing">
+          <div class="pillar-icon">🏘️</div>
+          <h3>Sustainable Growth</h3>
+          <p>
+            Encourage thoughtful, sustainable adaptation of housing, commercial, and industrial
+            development — growth that serves the community now and for generations to come.
+          </p>
+        </div>
+
+        <div class="pillar" id="community">
+          <div class="pillar-icon">🤝</div>
+          <h3>Community &amp; Connection</h3>
+          <p>
+            Bring together like-minded neighbors to socialize, share ideas, and build the
+            relationships that make Tualatin a place people are proud to call home.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Get Involved / Contact -->
+  <section class="section section-alt" id="contact">
+    <div class="container narrow">
+      <h2>Get Involved</h2>
+      <p class="lead">
+        TOGN is driven by residents who care about Tualatin's future. Join our mailing list
+        to stay informed about upcoming events, planning meetings, and volunteer opportunities.
+      </p>
+      <a
+        href="https://groups.google.com/u/0/g/togn"
+        target="_blank"
+        rel="noopener"
+        class="btn btn-outline"
+      >
+        Join the Mailing List
+      </a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* Hero */
+  .hero {
+    background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-mid) 60%, var(--sky) 100%);
+    color: var(--white);
+    padding: 6rem 1.5rem;
+    text-align: center;
+  }
+
+  .hero-content { max-width: 680px; margin: 0 auto; }
+
+  .hero h1 {
+    font-size: clamp(2.2rem, 6vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 1.25rem;
+  }
+
+  .hero h1 span { color: var(--green-light); }
+
+  .tagline {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    opacity: 0.9;
+    margin-bottom: 2rem;
+  }
+
+  /* Buttons */
+  .btn {
+    display: inline-block;
+    background: var(--green-light);
+    color: var(--green-dark);
+    font-weight: 700;
+    padding: 0.75rem 2rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: background 0.2s, transform 0.1s;
+  }
+
+  .btn:hover { background: #74d6a0; text-decoration: none; transform: translateY(-1px); }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--green-mid);
+    border: 2px solid var(--green-mid);
+  }
+
+  .btn-outline:hover { background: var(--green-pale); }
+
+  /* Sections */
+  .section { padding: 4rem 1.5rem; }
+  .section-alt { background: var(--green-pale); }
+
+  .container { max-width: 1000px; margin: 0 auto; }
+  .container.narrow { max-width: 640px; text-align: center; }
+
+  h2 {
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    font-weight: 700;
+    color: var(--green-dark);
+    margin-bottom: 1rem;
+  }
+
+  .lead {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 2.5rem;
+    max-width: 680px;
+  }
+
+  .container.narrow .lead { margin-left: auto; margin-right: auto; }
+
+  /* Pillars */
+  .pillars {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .pillar {
+    background: var(--white);
+    border-radius: 10px;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    border-top: 4px solid var(--green-light);
+  }
+
+  .pillar-icon { font-size: 2.2rem; margin-bottom: 0.75rem; }
+
+  .pillar h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--green-dark);
+    margin-bottom: 0.5rem;
+  }
+
+  .pillar p { color: var(--text-light); font-size: 0.95rem; }
+</style>
