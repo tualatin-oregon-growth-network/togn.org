@@ -1,0 +1,117 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="About — TOGN"
+  description="TOGN was founded in 2026 by Tualatin residents Brandon Philips and Nisha George."
+>
+  <div class="page-header">
+    <div class="container">
+      <h1>About TOGN</h1>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+
+      <div class="vision">
+        <p>
+          TOGN was founded in 2026 by Tualatin residents Brandon Philips and Nisha George.
+          We envision a Tualatin that thrives and grows with a focus on strong fiscal responsibility,
+          excellent design and engineering, sustainability, and preparedness for the future.
+        </p>
+        <p>We would love to meet you and grow Tualatin together!</p>
+      </div>
+
+      <div class="founders-photo">
+        <img src="/brandon-nisha.jpg" alt="Brandon Philips and Nisha George, TOGN co-founders" />
+      </div>
+
+      <div class="founders">
+        <div class="founder">
+          <h2>Brandon Philips</h2>
+          <p>
+            Brandon has experience in community organization and government reforms, including
+            the Washington County <a href="https://cedarmillnews.com/article/1122-neighborhoodstreets/" target="_blank" rel="noopener">Neighborhood Streets Program</a>
+            and advocacy around <a href="https://nabgas.com" target="_blank" rel="noopener">gas stations in the county</a>.
+          </p>
+        </div>
+
+        <div class="founder">
+          <h2>Nisha George</h2>
+          <p>
+            Nisha is a member of the <a href="https://cleanwaterservices.org/about/leadership-departments/cwac/" target="_blank" rel="noopener">Clean Water Services Advisory Committee</a>
+            and the Tualatin Parks Advisory Committee. She previously worked for the Army Corps
+            of Engineers on hydropower dams.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-header {
+    background: var(--green-dark);
+    color: var(--white);
+    padding: 3rem 1.5rem;
+  }
+
+  .page-header h1 { font-size: 2.2rem; font-weight: 800; }
+
+  .container { max-width: 800px; margin: 0 auto; }
+
+  .section { padding: 3rem 1.5rem 5rem; }
+
+  .vision {
+    font-size: 1.15rem;
+    line-height: 1.75;
+    color: var(--text);
+    margin-bottom: 2.5rem;
+    max-width: 680px;
+  }
+
+  .vision p + p { margin-top: 0.75rem; }
+
+  .founders-photo {
+    margin-bottom: 3rem;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+    max-width: 560px;
+  }
+
+  .founders-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .founders {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .founder {
+    background: var(--white);
+    border-radius: 10px;
+    padding: 1.75rem 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    border-top: 4px solid var(--green-light);
+  }
+
+  .founder h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--green-dark);
+    margin-bottom: 0.6rem;
+  }
+
+  .founder p { font-size: 0.95rem; color: var(--text-light); line-height: 1.65; }
+
+  .founder a { color: var(--green-mid); }
+  .founder a:hover { text-decoration: underline; }
+</style>
