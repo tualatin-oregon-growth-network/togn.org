@@ -48,6 +48,28 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
 
+      <div class="orgs-section">
+        <h2>Organizations We Like</h2>
+        <div class="orgs">
+          <a class="org-card" href="https://www.climatetownproductions.com" target="_blank" rel="noopener">
+            <div class="org-name">Climate Town</div>
+            <p>Engaging media and community action on the climate crisis.</p>
+          </a>
+          <a class="org-card" href="https://electrifypdx.org" target="_blank" rel="noopener">
+            <div class="org-name">Electrify Portland</div>
+            <p>Helping Portland-area homes and businesses go all-electric.</p>
+          </a>
+          <a class="org-card" href="https://www.rewiringamerica.org" target="_blank" rel="noopener">
+            <div class="org-name">Rewiring America</div>
+            <p>Electrifying everything — a roadmap for a clean energy future.</p>
+          </a>
+          <a class="org-card" href="https://backyardhabitats.org" target="_blank" rel="noopener">
+            <div class="org-name">Backyard Habitats</div>
+            <p>Certifying yards as wildlife habitat using native plants in the Portland metro area.</p>
+          </a>
+        </div>
+      </div>
+
     </div>
   </section>
 </Layout>
@@ -114,4 +136,51 @@ import Layout from '../layouts/Layout.astro';
 
   .founder a { color: var(--green-mid); }
   .founder a:hover { text-decoration: underline; }
+
+  /* Orgs */
+  .orgs-section { margin-top: 3rem; }
+
+  .orgs-section h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--green-dark);
+    margin-bottom: 1.25rem;
+  }
+
+  .orgs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+  }
+
+  .org-card {
+    display: block;
+    background: var(--white);
+    border-radius: 10px;
+    padding: 1.25rem 1.25rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    border-bottom: 3px solid var(--green-light);
+    transition: box-shadow 0.2s, transform 0.15s;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .org-card:hover {
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    transform: translateY(-2px);
+    text-decoration: none;
+  }
+
+  .org-name {
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--green-dark);
+    margin-bottom: 0.35rem;
+  }
+
+  .org-card p {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    line-height: 1.5;
+  }
 </style>
