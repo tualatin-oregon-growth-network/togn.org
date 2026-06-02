@@ -38,6 +38,21 @@ import Layout from '../layouts/Layout.astro';
 
       </div>
 
+      <div class="media-section">
+        <figure class="media-item">
+          <img src="/ivy-wide.jpg" alt="Ivy and blackberries covering the Tualatin River Greenway Trail at the Natchez Ct entrance" />
+          <figcaption>This is the Tualatin River Greenway Trail Natchez Ct entrance covered in ivy and blackberries further up the trail.</figcaption>
+        </figure>
+
+        <figure class="media-item">
+          <video controls preload="metadata">
+            <source src="/natchezct.webm" type="video/webm" />
+            Your browser does not support the video tag.
+          </video>
+          <figcaption>This is a 30 second video tour of the invasive ivy and blackberries near the Tualatin River Greenway Trail climbing trees and shading out other plants.</figcaption>
+        </figure>
+      </div>
+
       <div class="cards">
         <div class="card">
           <div class="card-icon">🌿</div>
@@ -122,6 +137,36 @@ import Layout from '../layouts/Layout.astro';
   .highlight-box p:last-child { margin-bottom: 0; }
   .highlight-box a { color: var(--green-mid); }
   .highlight-box a:hover { text-decoration: underline; }
+
+  /* Media */
+  .media-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .media-item {
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  }
+
+  .media-item img,
+  .media-item video {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .media-item figcaption {
+    padding: 0.75rem 1rem;
+    font-size: 0.85rem;
+    color: var(--text-light);
+    line-height: 1.5;
+    border-top: 1px solid #e8f0ea;
+  }
 
   /* Cards */
   .cards {
