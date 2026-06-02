@@ -7,7 +7,7 @@ import Layout from '../layouts/Layout.astro';
   <section class="hero">
     <div class="hero-content">
       <h1>Tualatin Oregon<br /><span>Growth Network</span></h1>
-      <p class="tagline">Supporting the sustainable future of Tualatin — trails, housing, and community.</p>
+      <p class="tagline">Supporting the sustainable future of Tualatin — trails, infrastructure, and community.</p>
       <a href="#contact" class="btn">Get Involved</a>
     </div>
   </section>
@@ -23,20 +23,20 @@ import Layout from '../layouts/Layout.astro';
       </p>
 
       <div class="pillars">
-        <div class="pillar" id="trails">
+        <a class="pillar pillar-link" id="trails" href="/trails">
           <div class="pillar-icon">🌲</div>
           <h3>Trail Networks</h3>
           <p>
             Nurture and expand Tualatin's trail networks for walkers, cyclists, and families.
             We advocate for connected, accessible greenways that link neighborhoods to nature.
           </p>
-        </div>
+        </a>
 
         <div class="pillar" id="housing">
           <div class="pillar-icon">🏘️</div>
           <h3>Sustainable Growth</h3>
           <p>
-            Encourage thoughtful, sustainable adaptation of housing, commercial, and industrial
+	  Encourage thoughtful, sustainable adaptation of infrastructure, housing, commercial, and industrial
             development — growth that serves the community now and for generations to come.
           </p>
         </div>
@@ -213,6 +213,19 @@ import Layout from '../layouts/Layout.astro';
     box-shadow: 0 2px 8px rgba(0,0,0,0.07);
     border-top: 4px solid var(--green-light);
   }
+
+  .pillar-link {
+    text-decoration: none;
+    color: inherit;
+    transition: box-shadow 0.2s, transform 0.15s;
+  }
+
+  .pillar-link:hover {
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    transform: translateY(-2px);
+  }
+
+  .pillar-link:hover h3 { color: var(--green-mid); }
 
   .pillar-icon { font-size: 2.2rem; margin-bottom: 0.75rem; }
 

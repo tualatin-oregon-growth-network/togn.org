@@ -1,0 +1,112 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Contact — TOGN"
+  description="Get in touch with the Tualatin Oregon Growth Network."
+>
+  <div class="page-header">
+    <div class="container">
+      <h1>Contact</h1>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <p class="lead">Have a question, idea, or want to get involved? We'd love to hear from you.</p>
+
+      <div class="contact-card">
+        <div class="contact-icon">✉️</div>
+        <div>
+          <h2>Email Us</h2>
+          <p>Reach Brandon directly at <a href="mailto:brandon@togn.org">brandon@togn.org</a>.</p>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-icon">📣</div>
+        <div>
+          <h2>Join the Mailing List</h2>
+          <p>
+            Subscribe to our announcements list to stay informed about events and meetings.
+            Send a subscription request with no Google account needed, or join through Google Groups.
+          </p>
+          <div class="btn-group">
+            <a href="mailto:announce+subscribe@togn.org" class="btn">Subscribe via Email</a>
+            <a href="https://groups.google.com/a/togn.org/g/announce" target="_blank" rel="noopener" class="btn btn-outline">Open Google Groups</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-header {
+    background: var(--green-dark);
+    color: var(--white);
+    padding: 3rem 1.5rem;
+  }
+
+  .page-header h1 { font-size: 2.2rem; font-weight: 800; }
+
+  .container { max-width: 800px; margin: 0 auto; }
+
+  .section { padding: 3rem 1.5rem 5rem; }
+
+  .lead {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+  }
+
+  .contact-card {
+    display: flex;
+    gap: 1.25rem;
+    align-items: flex-start;
+    background: var(--white);
+    border-radius: 10px;
+    padding: 1.75rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    border-left: 4px solid var(--green-light);
+    margin-bottom: 1.25rem;
+  }
+
+  .contact-icon { font-size: 1.75rem; flex-shrink: 0; }
+
+  .contact-card h2 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--green-dark);
+    margin-bottom: 0.4rem;
+  }
+
+  .contact-card p { font-size: 0.95rem; color: var(--text-light); line-height: 1.6; }
+
+  .contact-card a { color: var(--green-mid); }
+  .contact-card a:hover { text-decoration: underline; }
+
+  .btn-group { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1rem; }
+
+  .btn {
+    display: inline-block;
+    background: var(--green-light);
+    color: var(--green-dark);
+    font-weight: 700;
+    padding: 0.6rem 1.5rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    transition: background 0.2s, transform 0.1s;
+  }
+
+  .btn:hover { background: #74d6a0; text-decoration: none; transform: translateY(-1px); }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--green-mid);
+    border: 2px solid var(--green-mid);
+  }
+
+  .btn-outline:hover { background: var(--green-pale); }
+</style>

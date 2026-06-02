@@ -1,0 +1,182 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Trails — TOGN"
+  description="TOGN is building a volunteer team to care for the Tualatin River Greenway Trail and support Tualatin's parks and trail network."
+>
+  <div class="page-header">
+    <div class="container">
+      <h1>Trails</h1>
+      <p>Caring for Tualatin's natural treasures — together.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+
+      <p class="lead">
+        Tualatin has an amazing collection of <a href="https://www.tualatinoregon.gov/recreation/tualatin-parks-and-trails" target="_blank" rel="noopener">parks and trails</a>.
+        The staff at Tualatin Parks is small and mighty — but they can also use the support of the community.
+      </p>
+
+      <div class="highlight-box">
+        <h2>The Tualatin River Greenway Trail</h2>
+        <p>
+          We are building a team of interested folks to care for the crown jewel of our trail network:
+          the <a href="https://www.tualatinoregon.gov/recreation/tualatin-river-greenway-trail" target="_blank" rel="noopener">Tualatin River Greenway Trail</a>.
+        </p>
+        <p>
+          We are organizing volunteers to regularly remove invasive blackberry, ivy, and other pests
+          that need the watchful eye of frequent users to keep from overtaking the delicate and unique
+          ecosystem adjacent the Tualatin River.
+        </p>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <div class="card-icon">🌿</div>
+          <h3>Invasive Removal</h3>
+          <p>
+            Himalayan blackberry and English ivy spread aggressively, crowding out native plants and
+            destabilizing riverbanks. Regular removal by community volunteers makes a lasting difference.
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-icon">👀</div>
+          <h3>Frequent Eyes on the Trail</h3>
+          <p>
+            A healthy greenway depends on people who know it well. Regular users notice early-stage
+            encroachment before it becomes a major restoration project.
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🤝</div>
+          <h3>Community Stewardship</h3>
+          <p>
+            By working alongside city parks staff, TOGN volunteers amplify what a small but dedicated
+            team can accomplish for the whole community.
+          </p>
+        </div>
+      </div>
+
+      <div class="cta-box">
+        <h2>Get Involved</h2>
+        <p>Interested in joining a trail stewardship crew? Sign up for our mailing list or reach out directly — we'd love to have you.</p>
+        <div class="btn-group">
+          <a href="mailto:announce+subscribe@togn.org" class="btn">Join the Mailing List</a>
+          <a href="/contact" class="btn btn-outline">Contact Us</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-header {
+    background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-mid) 100%);
+    color: var(--white);
+    padding: 3.5rem 1.5rem;
+  }
+
+  .page-header h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 0.4rem; }
+  .page-header p { opacity: 0.85; font-size: 1.05rem; }
+
+  .container { max-width: 800px; margin: 0 auto; }
+
+  .section { padding: 3rem 1.5rem 5rem; }
+
+  .lead {
+    font-size: 1.15rem;
+    line-height: 1.75;
+    color: var(--text);
+    margin-bottom: 2rem;
+  }
+
+  .lead a { color: var(--green-mid); }
+  .lead a:hover { text-decoration: underline; }
+
+  /* Greenway highlight */
+  .highlight-box {
+    background: var(--green-pale);
+    border-left: 5px solid var(--green-mid);
+    border-radius: 0 10px 10px 0;
+    padding: 1.75rem 2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .highlight-box h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--green-dark);
+    margin-bottom: 0.75rem;
+  }
+
+  .highlight-box p { font-size: 1rem; color: var(--text); line-height: 1.7; margin-bottom: 0.75rem; }
+  .highlight-box p:last-child { margin-bottom: 0; }
+  .highlight-box a { color: var(--green-mid); }
+  .highlight-box a:hover { text-decoration: underline; }
+
+  /* Cards */
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .card {
+    background: var(--white);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    border-top: 4px solid var(--green-light);
+  }
+
+  .card-icon { font-size: 1.75rem; margin-bottom: 0.6rem; }
+
+  .card h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--green-dark);
+    margin-bottom: 0.4rem;
+  }
+
+  .card p { font-size: 0.9rem; color: var(--text-light); line-height: 1.6; }
+
+  /* CTA */
+  .cta-box {
+    background: var(--green-dark);
+    color: var(--white);
+    border-radius: 12px;
+    padding: 2rem 2rem;
+  }
+
+  .cta-box h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 0.5rem; }
+  .cta-box p { opacity: 0.85; font-size: 0.95rem; margin-bottom: 1.25rem; line-height: 1.6; }
+
+  .btn-group { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+
+  .btn {
+    display: inline-block;
+    background: var(--green-light);
+    color: var(--green-dark);
+    font-weight: 700;
+    padding: 0.65rem 1.5rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    transition: background 0.2s, transform 0.1s;
+  }
+
+  .btn:hover { background: #74d6a0; text-decoration: none; transform: translateY(-1px); }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--white);
+    border: 2px solid rgba(255,255,255,0.6);
+  }
+
+  .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.1); }
+</style>
