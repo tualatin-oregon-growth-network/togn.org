@@ -9,11 +9,11 @@ source: KGW News
 sourceUrl: https://www.kgw.com/
 ---
 
-A quiet innovation is humming beneath Tualatin's streets. The city has installed a microhydro turbine directly inside its drinking water pipeline — capturing energy from water pressure that previously went to waste, and converting it into clean electricity.
+A sustainable innovation has come to Tualatin's streets. The city installed a microhydro turbine inside our drinking water pipeline which captures energy from water pressure that previously went to waste, and converts it into clean electricity.
 
 ## How It Works
 
-Every water system uses pressure-reducing valves to ensure safe, consistent service to homes and businesses. Traditionally, the excess pressure those valves bleed off simply dissipates — energy lost forever.
+Every water system uses pressure-reducing valves to ensure safe, consistent service to homes and businesses. Traditionally, the excess pressure those valves bleed off simply dissipates — energy lost forever as heat.
 
 Tualatin's new system changes that equation.
 
@@ -48,5 +48,9 @@ For TOGN, this project is a model worth watching. It demonstrates exactly the ki
 > "It's existing infrastructure that we already have… and it's existing potential that we haven't unlocked."
 >
 > — Nick Westendorf
+
+## Pennies for Climate Action
+
+Tualatin residents support climate adapatations and smart infrastructure like this via the [Pennies for Climate Action](https://www.tualatinoregon.gov/finance/pennies-climate-action) funds. The City's investment in creating a Tualatin Climate Action Plan and through this modest pennies program enables the City staff to apply for State, Federal, and other grants supporting this type of work now and into the future.
 
 *Source: [KGW News](https://www.kgw.com/)*
