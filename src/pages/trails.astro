@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import MailingListSignup from '../components/MailingListSignup.astro';
 ---
 
 <Layout
@@ -80,14 +81,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
 
-      <div class="cta-box">
-        <h2>Get Involved</h2>
-        <p>Interested in joining a trail stewardship crew? Sign up for our mailing list or reach out directly — we'd love to have you.</p>
-        <div class="btn-group">
-          <a href="mailto:announce+subscribe@togn.org" class="btn">Join the Mailing List</a>
-          <a href="/contact" class="btn btn-outline">Contact Us</a>
-        </div>
-      </div>
+      <MailingListSignup
+        variant="cta"
+        heading="Get Involved"
+        body="Interested in joining a trail stewardship crew? Sign up for our mailing list or reach out directly — we'd love to have you."
+      />
 
     </div>
   </section>
@@ -195,37 +193,4 @@ import Layout from '../layouts/Layout.astro';
 
   .card p { font-size: 0.9rem; color: var(--text-light); line-height: 1.6; }
 
-  /* CTA */
-  .cta-box {
-    background: var(--green-dark);
-    color: var(--white);
-    border-radius: 12px;
-    padding: 2rem 2rem;
-  }
-
-  .cta-box h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 0.5rem; }
-  .cta-box p { opacity: 0.85; font-size: 0.95rem; margin-bottom: 1.25rem; line-height: 1.6; }
-
-  .btn-group { display: flex; gap: 0.75rem; flex-wrap: wrap; }
-
-  .btn {
-    display: inline-block;
-    background: var(--green-light);
-    color: var(--green-dark);
-    font-weight: 700;
-    padding: 0.65rem 1.5rem;
-    border-radius: 6px;
-    font-size: 0.9rem;
-    transition: background 0.2s, transform 0.1s;
-  }
-
-  .btn:hover { background: #74d6a0; text-decoration: none; transform: translateY(-1px); }
-
-  .btn-outline {
-    background: transparent;
-    color: var(--white);
-    border: 2px solid rgba(255,255,255,0.6);
-  }
-
-  .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.1); }
 </style>

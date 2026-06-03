@@ -1,0 +1,113 @@
+---
+interface Props {
+  variant?: 'card' | 'cta';
+  heading?: string;
+  body?: string;
+}
+const {
+  variant = 'card',
+  heading = 'Get Involved',
+  body = 'TOGN is driven by residents who care about Tualatin\'s future. Join our announcements list to stay informed about upcoming events, planning meetings, and volunteer opportunities.',
+} = Astro.props;
+---
+
+{variant === 'card' && (
+  <div class="signup-card">
+    <div class="signup-icon">📣</div>
+    <div>
+      <h2>Join the Mailing List</h2>
+      <p>
+        Subscribe to our announcements list to stay informed about events and meetings.
+        Send a subscription request with no Google account needed, or join through Google Groups.
+      </p>
+      <div class="btn-group">
+        <a href="mailto:announce+subscribe@togn.org" class="btn">Subscribe via Email</a>
+        <a href="https://groups.google.com/a/togn.org/g/announce" target="_blank" rel="noopener" class="btn btn-outline">Open Google Groups</a>
+      </div>
+    </div>
+  </div>
+)}
+
+{variant === 'cta' && (
+  <div class="cta-box">
+    <h2>{heading}</h2>
+    <p>{body}</p>
+    <div class="btn-group">
+      <a href="mailto:announce+subscribe@togn.org" class="btn">Subscribe via Email</a>
+      <a href="https://groups.google.com/a/togn.org/g/announce" target="_blank" rel="noopener" class="btn btn-outline-light">Open Google Groups</a>
+      <a href="/contact" class="btn btn-outline-light">Contact Us</a>
+    </div>
+  </div>
+)}
+
+<style>
+  /* card variant — matches contact page style */
+  .signup-card {
+    display: flex;
+    gap: 1.25rem;
+    align-items: flex-start;
+    background: var(--white);
+    border-radius: 10px;
+    padding: 1.75rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    border-left: 4px solid var(--green-light);
+    margin-bottom: 1.25rem;
+  }
+
+  .signup-icon { font-size: 1.75rem; flex-shrink: 0; }
+
+  .signup-card h2 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--green-dark);
+    margin-bottom: 0.4rem;
+  }
+
+  .signup-card p { font-size: 0.95rem; color: var(--text-light); line-height: 1.6; }
+  .signup-card a { color: var(--green-mid); }
+  .signup-card a:hover { text-decoration: underline; }
+
+  /* cta variant — matches trails page dark box style */
+  .cta-box {
+    background: var(--green-dark);
+    color: var(--white);
+    border-radius: 12px;
+    padding: 2rem;
+  }
+
+  .cta-box h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 0.5rem; }
+  .cta-box p { opacity: 0.85; font-size: 0.95rem; margin-bottom: 1.25rem; line-height: 1.6; }
+
+  /* shared */
+  .btn-group { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1rem; }
+
+  .btn {
+    display: inline-block;
+    background: var(--green-light);
+    color: var(--green-dark);
+    font-weight: 700;
+    padding: 0.65rem 1.5rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    transition: background 0.2s, transform 0.1s;
+    text-decoration: none;
+  }
+
+  .btn:hover { background: #74d6a0; text-decoration: none; transform: translateY(-1px); }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--green-mid);
+    border: 2px solid var(--green-mid);
+  }
+
+  .btn-outline:hover { background: var(--green-pale); }
+
+  .btn-outline-light {
+    background: transparent;
+    color: var(--white);
+    border: 2px solid rgba(255,255,255,0.6);
+  }
+
+  .btn-outline-light:hover { border-color: var(--white); background: rgba(255,255,255,0.1); }
+</style>

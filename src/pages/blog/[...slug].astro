@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
+import MailingListSignup from '../../components/MailingListSignup.astro';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
@@ -46,6 +47,15 @@ function formatDate(date: Date) {
     <div class="post-body section">
       <div class="container prose">
         <Content />
+      </div>
+      <div class="container">
+        <div class="signup-wrap">
+          <MailingListSignup
+            variant="cta"
+            heading="Enjoyed this post?"
+            body="Subscribe to our announcements list to get notified of new posts, upcoming events, and volunteer opportunities."
+          />
+        </div>
         <div class="back-link">
           <a href="/blog">← Back to Blog</a>
         </div>
@@ -141,7 +151,9 @@ function formatDate(date: Date) {
 
   .prose :global(strong) { color: var(--green-dark); font-weight: 700; }
 
-  .back-link { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #e0e8e2; }
+  .signup-wrap { margin-top: 3rem; }
+
+  .back-link { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #e0e8e2; }
   .back-link a { font-weight: 600; color: var(--green-mid); }
   .back-link a:hover { text-decoration: underline; }
 </style>

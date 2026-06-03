@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
+import MailingListSignup from '../../components/MailingListSignup.astro';
 
 const posts = (await getCollection('blog')).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
@@ -35,6 +36,13 @@ function formatDate(date: Date) {
           </li>
         ))}
       </ul>
+      <div class="signup-wrap">
+        <MailingListSignup
+          variant="cta"
+          heading="Stay in the Loop"
+          body="Subscribe to our announcements list and get notified when new posts go up, along with event announcements and volunteer opportunities."
+        />
+      </div>
     </div>
   </section>
 </Layout>
@@ -95,4 +103,6 @@ function formatDate(date: Date) {
 
   .read-more { font-size: 0.9rem; font-weight: 600; color: var(--green-mid); }
   .read-more:hover { text-decoration: underline; }
+
+  .signup-wrap { margin-top: 3rem; }
 </style>

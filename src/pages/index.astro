@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import MailingListSignup from '../components/MailingListSignup.astro';
 ---
 
 <Layout title="Tualatin Oregon Growth Network">
@@ -56,37 +57,7 @@ import Layout from '../layouts/Layout.astro';
   <!-- Get Involved / Contact -->
   <section class="section section-alt" id="contact">
     <div class="container narrow">
-      <h2>Get Involved</h2>
-      <p class="lead">
-        TOGN is driven by residents who care about Tualatin's future. Join our announcements list
-        to stay informed about upcoming events, planning meetings, and volunteer opportunities.
-      </p>
-      <div class="subscribe-options">
-        <div class="subscribe-card">
-          <div class="subscribe-icon">✉️</div>
-          <h3>Subscribe by Email</h3>
-          <p>Send a subscription request from your email client — no Google account needed.</p>
-          <a
-            href="mailto:announce+subscribe@togn.org"
-            class="btn"
-          >
-            Subscribe via Email
-          </a>
-        </div>
-        <div class="subscribe-card">
-          <div class="subscribe-icon">💬</div>
-          <h3>Join on Google Groups</h3>
-          <p>Browse the archive and join through Google Groups (requires a Google account).</p>
-          <a
-            href="https://groups.google.com/a/togn.org/g/announce"
-            target="_blank"
-            rel="noopener"
-            class="btn btn-outline"
-          >
-            Open Google Groups
-          </a>
-        </div>
-      </div>
+      <MailingListSignup variant="cta" />
     </div>
   </section>
 </Layout>
@@ -117,8 +88,8 @@ import Layout from '../layouts/Layout.astro';
     margin-bottom: 2rem;
   }
 
-  /* Buttons */
-  .btn {
+  /* Hero button */
+  .hero .btn {
     display: inline-block;
     background: var(--green-light);
     color: var(--green-dark);
@@ -127,17 +98,10 @@ import Layout from '../layouts/Layout.astro';
     border-radius: 6px;
     font-size: 1rem;
     transition: background 0.2s, transform 0.1s;
+    text-decoration: none;
   }
 
-  .btn:hover { background: #74d6a0; text-decoration: none; transform: translateY(-1px); }
-
-  .btn-outline {
-    background: transparent;
-    color: var(--green-mid);
-    border: 2px solid var(--green-mid);
-  }
-
-  .btn-outline:hover { background: var(--green-pale); }
+  .hero .btn:hover { background: #74d6a0; text-decoration: none; transform: translateY(-1px); }
 
   /* Sections */
   .section { padding: 4rem 1.5rem; }
@@ -160,42 +124,6 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .container.narrow .lead { margin-left: auto; margin-right: auto; }
-
-  /* Subscribe cards */
-  .subscribe-options {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.25rem;
-    text-align: left;
-  }
-
-  .subscribe-card {
-    background: var(--white);
-    border-radius: 10px;
-    padding: 1.5rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .subscribe-icon { font-size: 1.75rem; }
-
-  .subscribe-card h3 {
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--green-dark);
-    margin: 0;
-  }
-
-  .subscribe-card p {
-    font-size: 0.9rem;
-    color: var(--text-light);
-    flex: 1;
-    margin: 0;
-  }
-
-  .subscribe-card .btn { align-self: flex-start; margin-top: 0.5rem; }
 
   /* Pillars */
   .pillars {
