@@ -9,3 +9,5 @@ src/env.d.ts
 
 # OS
 .DS_Store
+
+*.swp
